@@ -13,22 +13,18 @@
   <body>
     <div class="container">
           <% if @current_user.present? %>
+            <a href="/"><h1 id="logo-font">Clonestagram</h1></a>
+            <nav>
+              <%=  link_to "Profile", user_path(@current_user) %>
+              <%=  link_to "Settings", edit_user_path(@current_user) %>
+            </nav>
             <%= yield %>
           <% else %>
             <%= yield(:no_user) %>
           <% end %>
       <footer>
         <nav>
-            <% if @current_user.present? %>
-              <%# <% if @current_user.admin? %>
-                <%# <%= link_to "All users", users_path %>
-              <%# <% end %>
-              <%# <%= link_to "New mixtape", new_mixtape_path %>
-              <%= link_to "Log out #{ @current_user.email }", login_path, :method => :delete %>
-            <% else %>
-              <%# <%= link_to "Sign up!", new_user_path %>
-              <%# <%= link_to "Sign in", login_path %>
-            <% end %>
+              <%= link_to "Log out #{ @current_user.email }", login_path, :method => :delete if @current_user.present? %>
         </nav>
       </footer>
     </div>

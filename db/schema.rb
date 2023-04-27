@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(version: 2023_04_24_035717) do
     t.string "password_digest"
     t.text "display_name"
     t.text "profile_picture"
+    t.text "biography"
+    t.text "phone_number"
+    t.text "gender"
+    t.text "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

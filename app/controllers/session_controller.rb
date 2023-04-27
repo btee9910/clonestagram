@@ -9,7 +9,7 @@ class SessionController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = "Invalid email or password"
-      redirect_to login_path # try again
+      redirect_to login_path
     end
   end
 

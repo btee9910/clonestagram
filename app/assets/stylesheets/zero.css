@@ -5,6 +5,17 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+p {
+    font-size: 16px;
+    text-decoration: bold;
+}
+
+a {
+    color: rgb(98, 175, 235);
+    padding: 5px 10px;
+    text-decoration-line: none;
+}
+
 .container  {
     max-width: 960px;
     margin: 0 auto;
@@ -21,7 +32,8 @@ body {
 
 #logo-font {
     font-family: 'Satisfy', cursive;
-    color: black;;
+    color: black;
+    font-size: 3em;
 }
 
 nav {
@@ -30,40 +42,11 @@ nav {
     margin-top: 30px;
 }
 
-nav > * {
-
-    margin: auto 5px;
-    color: rgb(32, 32, 32);
-}
-
-.feature {
-    max-width: 80%;
-}
-
-img {
-    max-width: 80%;
-    max-height: 600px;
-    margin-bottom: 20px;
-    position: relative;
-    vertical-align: center;
-}
-
-.thumb {
-    max-width: 180px;
-    margin: 0;
-}
-
-.logo {
-    max-width: 40%;
-    border: none;
-    box-shadow: none;
-}
-
 form {
     margin: 0 auto;
 }
 
-input, select {
+input {
     width: 90%;
     height: 35px;
     padding: 4px 15px;
@@ -83,22 +66,11 @@ input[name=commit] {
     border: none;
 }
 
-h1 {
-    font-size: 3em;
-}
+/* .feature {
+    max-width: 80%;
+} */
 
-p {
-    font-size: 16px;
-    text-decoration: bold;
-}
-
-a {
-    color: rgb(98, 175, 235);
-    padding: 5px 10px;
-    text-decoration-line: none;
-}
-
-ul {
+/* ul {
     list-style-type: none;
     position: relative;
     margin: auto;
@@ -133,12 +105,7 @@ li {
     padding-bottom: 50px;
     border-bottom: 2px solid rgba(128, 128, 128, 0.221);
 }
-.controls > * {
-    color: rgb(1, 10, 1);
-    padding: 3px 15px;
-    border: 1px solid rgba(0, 0, 0, 0.18);
-    border-radius: 15px;
-}
+
 
 div.brewery {
     padding-top: 20px;
@@ -146,4 +113,4 @@ div.brewery {
 
 .bottom_link {
     margin: 30px auto;
-}
+} */
