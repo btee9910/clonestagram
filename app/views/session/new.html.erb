@@ -1,15 +1,25 @@
-<h1>Sign In</h1>
+<% content_for :no_user do %>
+    <br>
+    <div class="form-container">
+        <a href="/"><h1 id="logo-font">Clonestagram</h1></a>
 
-<% if flash[:error].present? %>
-    <h2><%= flash[:error] %></h2>
-<% end %>
+        <% if flash[:error].present? %>
+            <h2><%= flash[:error] %></h2>
+        <% end %>
 
-<%= form_tag login_path do %>
-    <%= label_tag :email, nil, :class => 'form-label' %>
-    <%= email_field_tag :email, nil, :class => 'form-control' %>
+        <%= form_tag login_path do %>
+            <%= email_field_tag :email, nil, :class => 'form-control', :placeholder => 'email'%>
 
-    <%= label_tag :password, nil, :class => 'form-label' %>
-    <%= password_field_tag :password, nil, :class => 'form-control' %>
+            <%= password_field_tag :password, nil, :class => 'form-control', :placeholder => 'Password'%>
 
-    <%= submit_tag "Sign in", :class => 'btn btn-success btn-lg' %>
+            <%= submit_tag "Log in", :class => 'btn btn-success btn-lg' %>
+            <br>
+            <br>
+        <% end %>
+
+    </div>
+
+    <div class="form-container">
+        <p>Don't have an account?<a href="/users/new"><b>Sign up</b></a></p>
+    </div>
 <% end %>

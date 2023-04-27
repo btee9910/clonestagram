@@ -1,2 +1,40 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% content_for :no_user do %>
+    <br>
+    <div class="form-container">
+
+        <a href="/"><h1 id="logo-font">Clonestagram</h1></a>
+        <p><b>Sign up to see photos and videos from your friends.</b></p>
+
+        <%# Error message  %>
+        <% if @user.errors.any? %>
+            <ol>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ol>
+        <% end %>
+
+        <%= form_for @user do |f| %>
+
+            <%= f.email_field :email, :class => 'form-control', :placeholder => 'email'%>
+            <br>
+            <%= f.text_field :username, :class => 'form-control', :placeholder => 'Username'%>
+            <br>
+            <%= f.text_field :display_name, :class => 'form-control', :placeholder => 'Display name'%>
+            <br>
+            <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password'%>
+            <br>
+            <%= f.password_field :password_confirmation, :class => 'form-control', :placeholder => 'Password confirmation'%>
+            <br>
+            <p>People who use our service may have uploaded your contact information to Instagram. Learn More</p>
+            <p>By signing up, you agree to our Terms , Privacy Policy and Cookies Policy.</p>
+            <%= f.submit "Sign up"%>
+            <br>
+            <br>
+        <% end %>
+    </div>
+
+    <div class="form-container">
+        <p>Have an account?<a href="/login">Log in</a></p>
+    </div>
+<% end %>

@@ -1,13 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;0,800;0,900;1,400&family=Satisfy&display=swap');
 
 body {
-    background-color: rgb(203, 198, 189);
-    font-family: 'Aboreto', cursive;}
+    background-color: rgb(255, 255, 255);
+    font-family: 'Noto Sans', sans-serif;
+}
 
 .container  {
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
+}
+
+.form-container {
+    margin: 10px auto;
+    max-width: 400px;
+    border: 1.5px solid rgb(234, 234, 234);
+    padding: 30px 40px;
+    border-radius: 2px;
+}
+
+#logo-font {
+    font-family: 'Satisfy', cursive;
+    color: black;;
 }
 
 nav {
@@ -32,8 +46,6 @@ img {
     margin-bottom: 20px;
     position: relative;
     vertical-align: center;
-    /* border: 1px solid black;
-    box-shadow: -5px -5px 10px black; */
 }
 
 .thumb {
@@ -48,21 +60,27 @@ img {
 }
 
 form {
-    text-align: right;
-    margin-right: 32%;
+    margin: 0 auto;
 }
 
 input, select {
-    width: 200px;
-    border-radius: 5px;
+    width: 90%;
+    height: 35px;
     padding: 4px 15px;
     margin: 4px;
-    border-radius: 10px;
+    border-radius: 7px;
+    font-size: 18px;
+    border-style: none;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid silver;
 }
 
-input[name="commit"], select {
-    width: 235px;
-
+input[name=commit] {
+    width: 98%;
+    height: 40px;
+    color: white;
+    background-color: rgb(98, 175, 235);
+    border: none;
 }
 
 h1 {
@@ -75,7 +93,7 @@ p {
 }
 
 a {
-    color: rgb(80, 3, 4);
+    color: rgb(98, 175, 235);
     padding: 5px 10px;
     text-decoration-line: none;
 }
