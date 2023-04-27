@@ -1,18 +1,33 @@
-<h1 class="logo-font">Clonestagram</h1>
+<div class="profile_header log-in">
+    <div class="profile_pic">
+        <img src="<%= @user.profile_picture %>" alt="profile picture" class="profile_pic">
+    </div>
 
-
-<h1>Profile here</h1>
-<p>Go to home pages straight</p>
-<div>
-  <div class="row">
-    <div class="col">
-      Column
+    <div class="profile_info">
+        <div>
+            <div class="inline">
+                <h2><%= @user.username %></h2>
+            </div>
+            <div class="inline">
+                <%=  link_to "Edit profile", edit_user_path(@current_user), :id => "profile_button"%>
+            </div>
+        </div>
+        <div>
+            <div class="inline">
+                <h3><%= @user.username %> posts</h3>
+            </div>
+            <div class="inline">
+                <h3><%= @user.username %> followers</h3>
+            </div>
+            <div class="inline">
+                <h3><%= @user.username %> following</h3>
+            </div>
+        </div>
+        <div>
+            <h3><%= @user.display_name %></h3>
+        </div>
+        <div>
+            <a href="http://<%= @user.website %>"><%= @user.website %></a>
+        </div>
     </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
 </div>

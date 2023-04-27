@@ -1,7 +1,9 @@
 <br>
 <div class="form-container">
+    <%# <% if @user.profile_picture.present? %>
 
-    <a href="/"><h1 id="logo-font">Clonestagram</h1></a>
+    <%# <img src="" alt=""> %>
+
     <p><b>Edit info</b></p>
 
     <%# Error message  %>
@@ -16,22 +18,31 @@
     <%= form_for @user do |f| %>
         <%= f.label :display_name, :class => 'form-label' %>
         <%= f.text_field :display_name, :class => 'form-control'%>
+        <p>Help people discover your account by using the name you're known by: either your full name, nickname, or business name.</p>
         <br>
         <%= f.label :username, :class => 'form-label' %>
         <%= f.text_field :username, :class => 'form-control'%>
+        <p>Username is unique to each account.</p>
         <br>
         <%= f.label :website, :class => 'form-label' %>
-        <%= f.url_field :website, :class => 'form-control'%>
+        <%= f.text_field :website, :class => 'form-control'%>
         <br>
         <%= f.label :biography, "Bio", :class => 'form-label' %>
         <%= f.text_field :biography, :class => 'form-control'%>
         <br>
-
+        <h5>Personal information</h5>
+        <p>Provide your personal information, even if the account is used for a business, a pet or something else. This won't be a part of your public profile.</p>
         <%= f.label :email, :class => 'form-label' %>
         <%= f.email_field :email, :class => 'form-control'%>
         <br>
         <%= f.label :phone_number, :class => 'form-label' %>
         <%= f.number_field :phone_number, :class => 'form-control'%>
+        <br>
+        <%= f.label :gender, :class => 'form-label' %>
+        <%= f.select :gender, [ 'Male', 'Female', 'Other', 'Prefer not to say' ], :prompt => "Please Select", :class => 'form-control' %>
+        <br>
+        <%= f.label :profile_picture, :class => 'form-label' %>
+        <%= f.text_field :profile_picture, :class => 'form-control' %>
         <br>
 
         <%= f.submit "Submit"%>

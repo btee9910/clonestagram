@@ -5,6 +5,10 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+h3 {
+    margin: 5px auto;
+}
+
 p {
     font-size: 16px;
     text-decoration: bold;
@@ -32,7 +36,7 @@ a {
 
 #logo-font {
     font-family: 'Satisfy', cursive;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 3em;
 }
 
@@ -46,7 +50,7 @@ form {
     margin: 0 auto;
 }
 
-input {
+input, select {
     width: 90%;
     height: 35px;
     padding: 4px 15px;
@@ -58,12 +62,58 @@ input {
     border: 1px solid silver;
 }
 
+select {
+    width: 98%;
+}
+
 input[name=commit] {
     width: 98%;
     height: 40px;
     color: white;
     background-color: rgb(98, 175, 235);
     border: none;
+}
+
+ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.profile_header {
+    border: 2px solid red;
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+}
+
+.profile_header > * {
+    border: 2px solid red;
+
+}
+
+.profile_pic{
+    position: inherit;
+    max-width: 80%;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.profile_info {
+    padding: 10px 60px;
+    grid-column: auto / span 1; 
+    text-align: left;
+}
+
+#profile_button{
+    background-color: rgb(235, 235, 235);
+    border-radius: 9px;
+    margin-left: 15px;
+    padding: 8px 18px;
+    color: rgb(0, 0, 0);
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* .feature {
@@ -81,10 +131,7 @@ li {
     padding: 5px;
 }
 
-.inline {
-    display: inline-block;
-    vertical-align: middle;
-}
+
 
 .block {
     display: block;
