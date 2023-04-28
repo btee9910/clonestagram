@@ -1,0 +1,13 @@
+<h1>Photos</h1>
+<% @photos.each do |photo| %>
+    
+        <div class='inline' ><%= link_to image_tag(photo.image, :class => 'thumb'), photo if photo.image.present? %></div>
+        
+        <div class='inline'>
+            <ul>
+                <li>Caption:<%= link_to photo.caption, photo %></li>
+            </ul>
+        </div>
+    
+    
+<% end %>

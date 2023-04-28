@@ -1,7 +1,12 @@
 <div class="profile_header log-in">
-    <div class="profile_pic">
-        <img src="<%= @user.profile_picture %>" alt="profile picture" class="profile_pic">
+    <div>
+        <% if @user.profile_picture.present? %>
+            <img src="<%= @user.profile_picture %>" alt="profile picture" class="profile-pic">
+        <% else %>
+            <img src="/assets/default_profile_pic.png" alt="profile picture" class="profile-pic">
+        <% end %>
     </div>
+
 
     <div class="profile_info">
         <div>
@@ -14,20 +19,30 @@
         </div>
         <div>
             <div class="inline">
-                <h3><%= @user.username %> posts</h3>
+                <h3><%= @user.photos.count %> posts</h3>
             </div>
             <div class="inline">
-                <h3><%= @user.username %> followers</h3>
+                <h3>x followers</h3>
             </div>
             <div class="inline">
-                <h3><%= @user.username %> following</h3>
+                <h3>x following</h3>
             </div>
         </div>
         <div>
             <h3><%= @user.display_name %></h3>
         </div>
         <div>
-            <a href="http://<%= @user.website %>"><%= @user.website %></a>
+            <h4><%= @user.biography %></h4>
+        </div>
+        <div>
+            <a href="http://<%= @user.website %>" id="profile-website"><%= @user.website %></a>
         </div>
     </div>
+</div>
+<div class="photos-grid">
+    <% @user.photos.each do |photo| %>
+        <div class="each-photo-box inline">
+            <%= link_to image_tag(photo.image, :class => 'each-photo'), photo_path(photo) %>
+        </div>
+    <% end %>
 </div>
