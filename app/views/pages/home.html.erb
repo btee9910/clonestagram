@@ -10,7 +10,7 @@
             <% end %>
             </div>
             <div class="inline">
-                <h2><%= link_to User.find(photo.user_id).username, user_path(@current_user) %></h2>
+                <h2><%= link_to User.find(photo.user_id).username, user_path(User.find(photo.user_id)) %></h2>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
             <ul>
                 <li>
                 <h3 class="inline">
-                <%= link_to User.find(photo.user_id).username, user_path(@current_user) %>
+                <%= link_to User.find(photo.user_id).username, user_path(User.find(photo.user_id)) %>
                 </h3>
                 <p class="inline">
                 <%= photo.caption %>

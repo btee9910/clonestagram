@@ -15,7 +15,7 @@ p {
 }
 
 a {
-    color: rgb(98, 175, 235);
+    color: rgb(0, 0, 0);
     padding: 5px 10px;
     text-decoration-line: none;
 }
@@ -169,6 +169,12 @@ ul {
 .inline {
     display: inline-block;
     vertical-align: middle;
+}
+
+li {
+    margin: 0 auto;
+    width: 400px;
+    text-align: left;
 }
 
 /* 
