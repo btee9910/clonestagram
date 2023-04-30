@@ -1,7 +1,7 @@
 # Clonestagram
 Create a simple CRUD system with Ruby on rails to create a similar application like instagram. The application is not yet complete. Feature of the application will be added and imrove further.
 
-## :computer live project! [Coming soon](#) 
+## :computer: live project! [Coming soon](#) 
 
 ## :page_facing_up: About
 - Download instructions (if relevant):
@@ -22,9 +22,9 @@ $ rails server
 ![Wireframing](app/assets/images/draft.png)
 
 ## :rocket: Cool tech
-- close enough css to match actual instagram
+- close enough CSS to match actual instagram
 
-## :scream: Bugs to fix :poop:
+## :scream: Bugs to fix
 - A lot more features are to be added
 - Restriction on user need to be implemented
 - Like function is missing
