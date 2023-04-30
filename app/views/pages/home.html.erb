@@ -2,6 +2,7 @@
     <% Photo.all.each do |photo| %>
         
         <div class="post-header">
+            <%#profile thumbnail on post %>
             <div class="inline">
                 <% if User.find(photo.user_id).profile_picture.present? %>
                 <img src="<%= User.find(photo.user_id).profile_picture %>" alt="profile picture" class="thumb-profile-pic">
@@ -9,32 +10,26 @@
                 <img src="/assets/default_profile_pic.png" alt="profile picture" class="thumb-profile-pic">
             <% end %>
             </div>
+            <%#profile username on post %>
             <div class="inline">
                 <h2><%= link_to User.find(photo.user_id).username, user_path(User.find(photo.user_id)) %></h2>
             </div>
         </div>
 
+        <%#Photo %>
         <div><%= image_tag(photo.image, :class => 'thumb') %></div>
+
         <div>
             <ul>
                 <li>
-                <h3 class="inline">
-                <%= link_to User.find(photo.user_id).username, user_path(User.find(photo.user_id)) %>
-                </h3>
-                <p class="inline">
-                <%= photo.caption %>
-                </p>
+                    <%#profile username beside caption %>
+                    <h3 class="inline">
+                    <%= link_to User.find(photo.user_id).username, user_path(User.find(photo.user_id)) %>
+                    </h3>
+                    <%#photo caption %>
+                    <p class="inline"><%= photo.caption %></p>
                 </li>
             </ul>
         </div>
-        
-        
     <% end %>
 </div>
-
-
-<% content_for :no_user do %>
-  <div>
-    You created multiple yield blocks!
-  </div>
-<% end %>

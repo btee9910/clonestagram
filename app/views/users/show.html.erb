@@ -1,5 +1,6 @@
-<div class="profile_header log-in">
+<div class="profile_header log-in">  <%# use this view for profile page%>
     <div>
+        <%# identify profile picture, otherwise use default picture%>
         <% if @user.profile_picture.present? %>
             <img src="<%= @user.profile_picture %>" alt="profile picture" class="profile-pic">
         <% else %>
@@ -10,36 +11,45 @@
 
     <div class="profile_info">
         <div>
+            <%# username%>
             <div class="inline">
                 <h2><%= @user.username %></h2>
             </div>
+            <%#Edit profile detail button%>
             <div class="inline">
                 <%=  link_to "Edit profile", edit_user_path(@current_user), :id => "profile_button"%>
             </div>
         </div>
         <div>
+            <%# number of profile for user%>
             <div class="inline">
                 <h3><%= @user.photos.count %> posts</h3>
             </div>
+            <%# number of followers, not yet achieve%>
             <div class="inline">
                 <h3>x followers</h3>
             </div>
+            <%# number of following, not yet achieve%>
             <div class="inline">
                 <h3>x following</h3>
             </div>
         </div>
         <div>
+            <%# display name%>
             <h3><%= @user.display_name %></h3>
         </div>
         <div>
+            <%# biography for user%>
             <h4><%= @user.biography %></h4>
         </div>
         <div>
+            <%# optional website link for user%>
             <a href="http://<%= @user.website %>" id="profile-website"><%= @user.website %></a>
         </div>
     </div>
 </div>
 <div class="photos-grid">
+    <%# display all photos of this profile%>
     <% @user.photos.each do |photo| %>
         <div class="each-photo-box inline">
             <%= link_to image_tag(photo.image, :class => 'each-photo'), photo_path(photo) %>

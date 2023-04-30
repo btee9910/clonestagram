@@ -1,8 +1,10 @@
 <br>
 <div class="form-container">
+    <%# profile picture %>
     <% if @user.profile_picture.present? %>
         <img src="<%= @user.profile_picture %>" alt="profile picture" class="thumb-profile-pic">
     <% else %>
+        <%# default profile picture %>
         <img src="/assets/default_profile_pic.png" alt="profile picture" class="thumb-profile-pic">
     <% end %>
 
@@ -18,6 +20,7 @@
         </ol>
     <% end %>
 
+    <%#Add anf edit user profile detail%>
     <%= form_for @user do |f| %>
         <%= f.label :profile_picture, :class => 'form-label' %>
         <%= f.text_field :profile_picture, :class => 'form-control' %>

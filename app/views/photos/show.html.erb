@@ -1,28 +1,35 @@
 <div class="post">
     <div class="inline">
-        <%= image_tag @photo.image%>
+        <%= image_tag @photo.image%> <%# disply photo  %>
     </div>
 
     <div class="photo-header inline">
         <div class="inline">
+            <%# thumbnail profile picture beside username%>
             <% if User.find(@photo.user_id).profile_picture.present? %>
                 <img src="<%= User.find(@photo.user_id).profile_picture %>" alt="profile picture" class="thumb-profile-pic">
             <% else %>
+                <%# default picture%>
                 <img src="/assets/default_profile_pic.png" alt="profile picture" class="thumb-profile-pic">
             <% end %>
         </div>
+
         <div class="inline">
+            <%# Username%>
             <h2><%= User.find(@photo.user_id).username %></h2>
         </div>
+
         <ul>
-        <li><h3 class="inline"><%= User.find(@photo.user_id).username %></h3>
-        <p class="inline"><%= @photo.caption %></p>
-        </li>
-    </ul>
+            <li>
+                <%#Username and caption%>
+                <h3 class="inline"><%= User.find(@photo.user_id).username %></h3>
+                <p class="inline"><%= @photo.caption %></p>
+            </li>
+        </ul>
     </div>
 </div>
 
-    <div class="controls ">
-        <%=  link_to "Edit", edit_photo_path(@photo), :class => "mod-key" %>
-        <%=  link_to "Delete", @photo, :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => "mod-key" %>
-    </div>
+<div class="controls ">
+    <%=  link_to "Edit", edit_photo_path(@photo), :class => "mod-key" %>
+    <%=  link_to "Delete", @photo, :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => "mod-key" %>
+</div>

@@ -1,24 +1,40 @@
-# README
+# Clonestagram
+Create a simple CRUD system with Ruby on rails to create a similar application like instagram. The application is not yet complete. Feature of the application will be added and imrove further.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## :computer live project! [Coming soon](#) 
 
-Things you may want to cover:
+## :page_facing_up: About
+- Download instructions (if relevant):
+```zsh
+$ git clone clonestagram
+$ cd clonestagram
+$ rails server
+```
+- Get to http://localhost:3000/
+- You will be redirect to sign up page.
+- CLick 'sign up' to sign up for your account.
+- once it is sign up, click profile to add more detail for your profile.
+- click create to add photo to your profile.
+- Home show phtos from all users. It will limit to user that you follow in future update.
 
-* Ruby version
+## :pencil2: Planning
+- Database draft of app logic.
+![Wireframing](app/assets/images/draft.png)
 
-* System dependencies
+## :rocket: Cool tech
+- close enough css to match actual instagram
 
-* Configuration
+## :scream: Bugs to fix :poop:
+- A lot more features are to be added
+- Restriction on user need to be implemented
+- Like function is missing
+- comment feature is missing
+- Photos upload function will be added.
 
-* Database creation
+## :sob: Lessons learnt
+- A better planning of project and schedule are required.
+- add one feature at a time and focus on it to avoid confusion.
+- A deeper understand on its material would help getting project done smoother.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## :white_check_mark: Future features
+Hoping to make a functionally real close app like instagram.
